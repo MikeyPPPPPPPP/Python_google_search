@@ -99,6 +99,6 @@ try:
 except:
     print('Error')
     
+print('\n\n\n\nAll Results:\n\n')
 for f, b in zip(page_in_url, text_for_page):
-    print('\n\n\n\nAll Results:\n\n'+f+'\n'+b+'\n')
-                
+    print(f+'\n'+b+'\n')
