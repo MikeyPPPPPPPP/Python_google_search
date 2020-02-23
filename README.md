@@ -1,7 +1,6 @@
 # Python_google_search
-gets all urls on a google search
+Gets all urls on a google search on all the pages
 
-JUST USE:
-bs4_parse google.py
 
-the others dont work
+
+
