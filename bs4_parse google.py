@@ -92,7 +92,7 @@ def get_searches(url):
 start()
 time.sleep(2)
 try:
-    for x in range(1,20):
+    for x in range(1,25):
         url = urls_on[0]
         get_searches(url)
         pages(url)
