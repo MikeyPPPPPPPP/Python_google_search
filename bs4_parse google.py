@@ -68,15 +68,6 @@ def pages(url):
     
     urls_on.remove(urls_on[0])
     urls_on.append(stoper[-1])
-    
-
-def get_searches(url):
-    headers = {}
-    headers['User-Agent'] = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17"
-    req = urllib.request.Request(url, headers = headers)
-    resp = urllib.request.urlopen(req)
-    red = resp.read()
-    soup = bs.BeautifulSoup(red,'lxml')
     for data in soup.find_all('div', class_='r'):
         for a in data.find_all('a'):
             if 'https://webcache.googleusercontent.com/' in a.get('href') or '/search' in a.get('href') or '#' in a.get('href'):
@@ -94,7 +85,6 @@ time.sleep(2)
 try:
     for x in range(1,20):
         url = urls_on[0]
-        get_searches(url)
         pages(url)
 except:
     print('Error')
